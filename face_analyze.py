@@ -27,11 +27,8 @@ emotion_phrase =({
 })
 
 def main():
-    # モデルロード
-    model = load_model(emotion_model_path, compile=False)
-    #配列初期化
-    a = np.array([0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.4])
-    predicts = np.tile(a, (10, 1))
+    # 初期化
+    model, predicts = em.init_emotion(10)
     print(predicts)
 
     with picamera.PiCamera() as camera:
