@@ -6,7 +6,7 @@ emotion analysis by python on the raspberry pi
 
 ## HOW TO USE
 ### インストール
-「https://mlbb1.blogspot.com/2018/08/keras-tensorflow.html」を参照   
+「https://mlbb1.blogspot.com/2018/08/keras-tensorflow.html」 を参照   
 1. Kerasほか
 ```
 sudo apt update
@@ -35,10 +35,10 @@ sudo apt-get install python3-picamera
 
 ### 環境設定
 1. 感情認識学習済みモデル   
-「https://github.com/oarriaga/face_classification」から   
+「https://github.com/oarriaga/face_classification」 から   
 'fer2013_mini_XCEPTION.102-0.66.hdf5'を使用する。
-2. 顔認識
-「https://github.com/opencv/opencv/tree/master/data/haarcascades」から   
+2. 顔認識   
+「https://github.com/opencv/opencv/tree/master/data/haarcascades」 から   
 'haarcascade_frontalface_alt2.xml'を使用する。
 
 ### モジュールからの呼び出し
