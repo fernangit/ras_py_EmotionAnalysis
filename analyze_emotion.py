@@ -25,6 +25,15 @@ emotion_phrase =({
 6:["自然体","いい感じ","ナチュラル"]
 })
 
+def init_emotion(n):
+    # モデルロード
+    model = load_model(emotion_model_path, compile=False)
+    #配列初期化
+    a = np.array([0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.4])
+    predicts = np.tile(a, (n, 1))
+
+    return model, predicts
+
 #感情予測
 def emotion(model):
     load_img = image.load_img(rgb_image, grayscale=True , target_size=(64, 64))
@@ -68,11 +77,8 @@ def mean_emotion(predict, predicts):
     return predicts
 
 def main():
-    # モデルロード
-    model = load_model(emotion_model_path, compile=False)
-    #配列初期化
-    a = np.array([0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.4])
-    predicts = np.tile(a, (10, 1))
+    # 初期化
+    model, predicts = init_emotion(10)
     print(predicts)
 
     #感情分析
