@@ -2,29 +2,10 @@
 import picamera
 import picamera.array
 import cv2
-
-from keras.models import load_model
-from keras.preprocessing.image import ImageDataGenerator
-from keras.preprocessing import image
-import numpy as np
-import random
 import analyze_emotion as em
 
 #cascade_file = "/home/pi/work/haarcascades/haarcascade_frontalface_default.xml"
 cascade_file = "/home/pi/work/haarcascades/haarcascade_frontalface_alt2.xml"
-
-emotion_model_path = './trained_models/fer2013_mini_XCEPTION.102-0.66.hdf5'
-emotion_labels = ({0:'angry',1:'disgust',2:'fear',3:'happy',
-        4:'sad',5:'surprise',6:'neutral'})
-emotion_phrase =({
-0:["やる気充分","熱い","格好いい"],
-1:["あなたらしい","クール","個性的"],
-2:["慎重","冷静","謙虚"],
-3:["最高の気分","元気","明るい"],
-4:["感無量","胸が一杯","涙がでそう"],
-5:["びっくり","サプライズ","最高"],
-6:["自然体","いい感じ","ナチュラル"]
-})
 
 def main():
     # 初期化
