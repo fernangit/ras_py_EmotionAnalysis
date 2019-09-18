@@ -15,7 +15,7 @@ sudo pip3 install keras theano
 ```
 2. OpenCV
 ```
-sudo apt install python3-opencv
+sudo pip3 install opencv-contrib-python
 ```
 3. TensorFlow
 ```
