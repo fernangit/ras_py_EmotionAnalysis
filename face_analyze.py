@@ -7,7 +7,7 @@ import analyze_emotion as em
 #cascade_file = "/home/pi/work/haarcascades/haarcascade_frontalface_default.xml"
 cascade_file = "/home/pi/work/haarcascades/haarcascade_frontalface_alt2.xml"
 
-def main():
+def face_analyze()
     # 初期化
     model, predicts = em.init_emotion(10)
     print(predicts)
@@ -53,6 +53,10 @@ def main():
                 stream.seek(0)
                 stream.truncate()
             cv2.destroyAllWindows()
+
+def main():
+    # カメラから顔画像取り込み、表情分析
+    face_analyze()
 
 if __name__ == '__main__':
     main()
