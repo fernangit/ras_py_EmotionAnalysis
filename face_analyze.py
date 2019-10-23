@@ -7,7 +7,7 @@ import analyze_emotion as em
 #cascade_file = "/home/pi/work/haarcascades/haarcascade_frontalface_default.xml"
 cascade_file = "/home/pi/work/haarcascades/haarcascade_frontalface_alt2.xml"
 
-def face_analyze()
+def face_analyze():
     # 初期化
     model, predicts = em.init_emotion(10)
     print(predicts)
